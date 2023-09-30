@@ -5,7 +5,7 @@ const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm
 
 function processTextNodes(node) 
 {
-    if (node.nodeType === Node.TEXT_NODE) 
+    if (node.nodeType === Node.TEXT_NODE && node.tagName != "SCRIPT") 
     {
         let text = node.textContent.toLowerCase();
         for (let i = 0; i < vowels.length; ++i)
